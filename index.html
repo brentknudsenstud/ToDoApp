@@ -8,27 +8,41 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    
+    <!--External CSS links-->
     <link type="text/css" rel="stylesheet" href="mycss/stylemain.css" />
-    <link type="text/css"rel="stylesheet" href="mycss/mobile.css" />
-    <link type="text/css"rel="stylesheet" href="mycss/tablet.css" />
-    <link type="text/css rel="stylesheet" href="mycss/desktop.css" />
-    <script defer src="myjs/1to2.js"></script>
-    <script defer src="myjs/3to5.js"></script>
-    <script defer src="myjs/6to7.js"></script>
+    <link type="text/css" rel="stylesheet" href="mycss/mobile.css" />
+    <link type="text/css" rel="stylesheet" href="mycss/tablet.css" />
+    <link type="text/css" rel="stylesheet" href="mycss/desktop.css" />
+    
+    <!--External JavaScript Links-->
+    <script defer type="text/javascript" src="myjs/1to2.js"></script>
+    <script defer type="text/javascript" src="myjs/3to5.js"></script>
+    <script defer type="text/javascript" src="myjs/6to7.js"></script>
     <script defer type="text/javascript" src="js/materialize.min.js"></script>
-    
-
-    <link rel="stylesheet" href="mycss/stylemain.css" />
-    <link rel="stylesheet" href="mycss/mobile.css" />
-    <link rel="stylesheet" href="mycss/tablet.css" />
-    <link rel="stylesheet" href="mycss/desktop.css" />
-
-    
-    
 </head>
+
 <body>
     <header>
-        What to do?!
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">What to Do!?</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">Javascript</a></li>
+            <li><a href="mobile.html">Mobile</a></li>
+          </ul>        
     </header>
 
     
