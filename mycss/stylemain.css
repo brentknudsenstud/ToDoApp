@@ -1,5 +1,7 @@
 body {
     background-color: #D7B49E;
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
@@ -8,4 +10,19 @@ nav {
 
 .page-footer {
     background-color: #05A8AA;
+}
+
+.brand-logo {
+    font-family: 'Averia Sans Libre', cursive;
+}
+
+nav ul li {
+    font-family: 'Averia Sans Libre', cursive;
+}
+
+.page-footer ul li {
+    font-family: 'Averia Sans Libre', cursive;
+}
+.footer-copyright {
+    font-family: 'Quicksand', sans-serif;
 }
