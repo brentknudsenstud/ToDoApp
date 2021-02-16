@@ -1,7 +1,19 @@
 body {
-    background-color: #D7B49E;
-    /* font-family: 'Quicksand', sans-serif; */
     font-family: 'Montserrat', sans-serif;
+    color: #bc412b;
+    margin: 0 5%;
+}
+
+.page-content {
+    background-color: #d7b49e;
+}
+
+.nav-wrapper, main, .page-footer {
+    padding: 0 5%;
+}
+
+.footer-copyright .container{
+   
 }
 
 nav {
@@ -10,10 +22,13 @@ nav {
 
 .page-footer {
     background-color: #05A8AA;
+    color: #bc412b;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .brand-logo {
     font-family: 'Averia Sans Libre', cursive;
+
 }
 
 nav ul li {
@@ -23,6 +38,24 @@ nav ul li {
 .page-footer ul li {
     font-family: 'Averia Sans Libre', cursive;
 }
+
+.page-footer .footer-copyright {
+    background-color: transparent;
+}
+
 .footer-copyright {
     font-family: 'Quicksand', sans-serif;
+
 }
+
+.container {
+    width: 100%;
+}
+}
+
+/* COLOR PALLETTE BELOW */
+/* #05a8aa Verdigris (Dark Turquoise), used for header and footer background
+    #b8d5b8 Turquoise Green, used for ?
+    #d7b49e Desert Sand (light tanish-brown), used for body background
+    #dc602e Flame (orange), used for accents/logos
+    #bc412b International Orange Golden Gate Bridge (dark red-orange), used for font color? */
