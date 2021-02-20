@@ -8,12 +8,22 @@ body {
     background-color: #d7b49e;
 }
 
-.nav-wrapper, main, .page-footer {
-    padding: 0 5%;
+.nav-wrapper, main, .container, .page-footer {
+    padding: 10px 5%;
 }
 
-.footer-copyright .container{
-   
+.divider {
+    background-color: lightgray;
+    height: 2px;
+    margin: 40px 0;
+}
+
+.btn:hover {
+    background-color: #05a8aa;
+}
+.btn {
+    background-color: #05a8aa;
+    box-shadow: none;
 }
 
 nav {
@@ -51,6 +61,7 @@ nav ul li {
 .container {
     width: 100%;
 }
+
 
 
 /* COLOR PALLETTE BELOW */

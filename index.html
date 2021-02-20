@@ -13,8 +13,10 @@
     
     <!--External CSS links-->
     <!--Import materialize.css below-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    
     <!--MyCSS link below-->
     <link type="text/css" rel="stylesheet" href="mycss/stylemain.css" />
     
@@ -43,16 +45,35 @@
             <li><a href="index.html">Home</a></li>
           </ul>        
     </header>
-    <main>
-      <h6>Create. Modify. Delete.</h6>
-      <p>This powerful application will help you set short and long-term goals and be more productive in your everyday life.</p>
-      <ul>
-        <li>Got a DIY project? No problem!</li>
-        <li>Hosting a party? Make it a cinch.</li>
-        <li>Got a trip to plan? Enjoy the journey.</li>
-        <li>Need to organize a move? Ensure smooth sailing.</li>
-      </ul>
-    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m8 l6">
+        <h6>Create. Modify. Delete.</h6>
+          <p>This powerful application will help you be more productive in your everyday life.</p>
+          <ul>
+            <li>Got a DIY project? No problem!</li>
+            <li>Hosting a party? Make it a cinch.</li>
+            <li>Got a trip to plan? Enjoy the journey.</li>
+            <li>Need to organize a move? Ensure smoothness.</li>
+          </ul>
+        </div>
+          <div class="col s12 m8 l6 ">
+            <img src="images/cupcakes.jpg" width="100%" />
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col s3 m4">
+              <input id="what-list" placeholder="Enter List Name">
+                <a id="list-name" class="waves-light btn">
+                  TEST
+                  </a>       
+          </div>
+          <div class="col s9 m8">
+            <h5 id="selected-list-output">test</h5>
+          </div>
+        </div>    
+      </div>
     <footer class="page-footer">
         <div class="container">
           <div class="row">
