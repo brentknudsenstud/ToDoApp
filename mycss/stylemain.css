@@ -18,6 +18,21 @@ body {
     margin: 40px 0;
 }
 
+input[type=text]:not(.browser-default) {
+    background-color: white;
+    color: #b8d5b8;
+    padding: 0 0 0 5px;
+    border-bottom: 2px solid #05a8aa;
+}
+input[type=text]:not(.browser-default):hover {
+    background-color: #f3fcf3;
+    color: #bc412b;
+}
+
+.collection a.collection-item {
+    color: #bc412b;
+}
+
 .btn:hover {
     background-color: #05a8aa;
 }
