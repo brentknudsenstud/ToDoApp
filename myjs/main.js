@@ -17,7 +17,7 @@ const currentList = {
   ]
 }
 
-todos: [
+const tasks: [
   {text: 'bananas',
   completed: false},
   {text: '1 lb ground turkey',
@@ -27,7 +27,7 @@ todos: [
 const lists = {
   1: {
     name: 'Shopping List',
-    todos: [
+    lists: [
       {text: 'bananas',
       completed: false,},
       {
