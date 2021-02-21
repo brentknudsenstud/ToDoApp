@@ -35,10 +35,12 @@ input[type=text]:not(.browser-default):hover {
 
 .btn:hover {
     background-color: #05a8aa;
+    
 }
 .btn {
     background-color: #05a8aa;
     box-shadow: none;
+    margin: 0 0 20px 0;
 }
 
 nav {
