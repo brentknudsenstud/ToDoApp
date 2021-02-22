@@ -64,6 +64,18 @@ function show() {
   document.getElementById('what-task').innerHTML = tasksHtml;
 }
 
+function addTasks() {
+// get the task from the task input box
+const text = 
+document.getElementById('taskinputbox').value;
+if(text) {
+  currentList.tasks.push({
+    text: text,
+    completed: false
+  })
+  show();
+}
+}
   // 1a - create lists
 
   // 1b- name lists
