@@ -39,19 +39,31 @@ const lists = {
 }
  
 const currentList = lists[0];
+const currentTask = tasks[0];
 
 // Insert sample function code from slide 14 below
-function show() {
+function showList() {
   //hold the html that will be displayed in the list sidebar
   let listsHtml = '<div id="what-list" class="collection">';
   // iterate through the lists to get their names
   lists.forEach((list) => {
-    //Make it so each list that is created has it's own id as it loops through below.
-    listsHtml += '<a id="list-name1" href="#!" class="collection-item detail">${list.name}</a>';
+    //Make it so each list that is created has its own id as it loops through below.
+    listsHtml += '<a id="${list.id}" href="#" class="collection-item detail">${list.name}</a>';
   });
+}
   //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;
 
+function showTask() {
+// hold the html that will displayed in the task 'sidebar'
+let tasksHtml = '<div id="add-task" class="collection">';
+// iterate through the tasks to get their names
+tasks.forEach((task) => {
+// Make it so each task that is created has its own id as it loops through below.
+tasksHtml += '<a id="${task.id}" href="#" class="collection-item detail">${task.name}</a>';
+});
+// print out the tasks
+document.getElementById('add-task').innerHTML = tasksHtml;
   //print out the name of the current list
   document.getElementById('selected-list-output'). innerText = currentList.name;
 
@@ -60,9 +72,6 @@ function show() {
   currentList.tasks.forEach((list) => {
     tasksHtml +='<a id="?" href="#!" class="collection-item">${tasks.text}</a>';
   });
-
-  //print out the tasks
-  document.getElementById('what-task').innerHTML = tasksHtml;
 }
 
 function addTasks() {
@@ -74,7 +83,7 @@ if(text) {
     text: text,
     completed: false
   })
-  show();
+  showTask();
 }
 }
   // 1a, 1b - create lists and name lists
@@ -86,10 +95,10 @@ function addLists() {
       text: text,
       completed: false,
     })
-    show();
+    showList();
   }
 }
-  // 1b- name lists
+// 1c - remove lists
 
 function removeLists() {
 
