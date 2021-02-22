@@ -46,13 +46,14 @@ function show() {
   let listsHtml = '<div id="what-list" class="collection">';
   // iterate through the lists to get their names
   lists.forEach((list) => {
+    //Make it so each list that is created has it's own id as it loops through below.
     listsHtml += '<a id="list-name1" href="#!" class="collection-item detail">${list.name}</a>';
   });
   //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;
 
   //print out the name of the current list
-  document.getElementById(''). innerText = currentList.name;
+  document.getElementById('selected-list-output'). innerText = currentList.name;
 
   // iterate over the tasks in the current list
   let tasksHtml = '<div id="what-task" class="collection">';
@@ -76,14 +77,19 @@ if(text) {
   show();
 }
 }
-  // 1a - create lists
+  // 1a, 1b - create lists and name lists
 function addLists() {
-  const 
+  const text =
+  document.getElementById('what-list').value;
+  if(text) {
+    currentList.lists.push({
+      text: text,
+      completed: false,
+    })
+    show();
+  }
 }
   // 1b- name lists
-function nameLists() {
-
-}
 
 function removeLists() {
 
