@@ -17,7 +17,7 @@ const currentList = {
   ]
 }
 
-const tasks: [
+const tasks = [
   {text: 'bananas',
   completed: false},
   {text: '1 lb ground turkey',
