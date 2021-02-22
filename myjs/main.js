@@ -1,21 +1,21 @@
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
+//  document.addEventListener('DOMContentLoaded', function() {
+//    var elems = document.querySelectorAll('.sidenav');
+//    var instances = M.Sidenav.init(elems, options);
+//  });
 // objects
 
-const lists = {
-  1: {name: 'Shopping list'},
-  2: {name: 'Honey do list'},
-  // extra lists below
-}
+// const lists = {
+//   1: {name: 'Shopping list'},
+//   2: {name: 'Honey do list'},
+//   // extra lists below
+// }
 
-const currentList = {
-  name: 'Shopping List',
-  todos: [
+// const currentList = {
+//   name: 'Shopping List',
+//   todos: [
 
-  ]
-}
+//   ]
+// }
 
 const tasks = [
   {text: 'bananas',
@@ -67,7 +67,7 @@ function show() {
 function addTasks() {
 // get the task from the task input box
 const text = 
-document.getElementById('taskinputbox').value;
+document.getElementById('enter-task').value;
 if(text) {
   currentList.tasks.push({
     text: text,
@@ -77,19 +77,32 @@ if(text) {
 }
 }
   // 1a - create lists
-
+function addLists() {
+  const 
+}
   // 1b- name lists
+function nameLists() {
 
+}
+
+function removeLists() {
+
+}
   // 2 - create limitless tasks
 
   // 3 - mark task complete
+function markTasksCompleted() {
 
+}
   // 4 - clear completed task
+function clearCompletedTasks() {
 
+}
   // 5 - edit task
+function editTasks() {
 
+}
   // 6a - delete tasks without completing them first
-
   // 6b - delete lists without completing them first
 
   // 7a - use local storage to store list names
