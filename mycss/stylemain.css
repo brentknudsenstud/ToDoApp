@@ -40,7 +40,7 @@ input[type=text]:not(.browser-default):hover {
 .btn {
     background-color: #05a8aa;
     box-shadow: none;
-    margin: 0 0 20px 0;
+    margin: 0 10px 20px 0;
 }
 
 nav {
