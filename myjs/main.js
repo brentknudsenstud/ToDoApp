@@ -46,13 +46,3 @@ const lists = [
 
 const currentList = lists[0];
 const currentTask = tasks[0];
-
-
-// 1a, 1b - create lists and name lists
-
-// 1c - remove lists
-
-
-// 2 - create limitless tasks
-
-// 3 - mark task complete

@@ -1,3 +1,7 @@
+// 1a, 1b - create lists and name lists
+
+// 1c - remove lists
+
 class List {
     constructor(
       id,
