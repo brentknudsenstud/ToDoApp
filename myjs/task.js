@@ -10,39 +10,31 @@ class Task {
     setCompleted() { }
     editTasks() { }
   }
-
-  function showTask() {
-    // hold the html that will displayed in the task 'sidebar'
-    let tasksHtml = '<div id="add-task" class="collection">';
-    // iterate through the tasks to get their names
+  // Pattern function showTasks() below after the showLists() function in list.js
+  function showTasks() {
+    
+    // iterate over the tasks in the current list
+    let tasksHtml = '';
     tasks.forEach((task) => {
-      // Make it so each task that is created has its own id as it loops through below.
-      tasksHtml += `<a id="${task.id}" href="#" class="collection-item detail">${task.name}</a>`;
+    // Make it so each list that is created has its own id as it loops through below
+      tasksHtml += `<a id="${task.id}" href="#!" class="collection-item detail">${task.text}</a>`;
     });
     // print out the tasks
-    document.getElementById('add-task').innerHTML = tasksHtml;
-    //print out the name of the current list
-    document.getElementById('selected-list-output').innerText = currentList.name;
-  
-    // iterate over the tasks in the current list
-    let tasksHtml = '<div id="what-task" class="collection">';
-    currentList.tasks.forEach((list) => {
-      tasksHtml += `<a id="?" href="#!" class="collection-item">${tasks.text}</a>`;
-    });
+    let test = document.getElementById('what-task'); 
+    console.log(test);
+
   }
-  
+  // The function below was patterned after the addLists() function in list.js
   function addTasks() {
-    // get the task from the task input box
-    const text =
-      document.getElementById('enter-task').value;
-    if (text) {
-      currentList.tasks.push({
-        text: text,
-        completed: false
-      })
-      showTask();
+      const text =
+        document.getElementById('enter-task').value;
+      if (text) {
+        lists.push(new Task(text)
+        )
+        showTasks();
+      }
+     // window.localStorage.setItem(lists, JSON.stringify(text));
     }
-  }
 
   function markTasksCompleted() {
 
@@ -63,17 +55,15 @@ function removeTask(id, name) {
   list.removeTask(id, name);
   print();
 }
-document.getElementById("remove-task").innerHTML = removeTasksHtml
+// // hold the html that will displayed in the task 'sidebar'
+// let removeTasksHtml = '<div id="remove-task" class="collection">';
+// // iterate through the tasks to remove them
+// currentList.tasks.forEach((removetask) => {
+//   // Make it so each task that is created has its own id as it loops through below.
+//   removeTasksHtml += `<a id="${removetask.id}" href="#" class="collection-item detail">${removetask.name}</a>`;
+// });
 
-
-// hold the html that will displayed in the task 'sidebar'
-let removeTasksHtml = '<div id="remove-task" class="collection">';
-// iterate through the tasks to remove them
-tasks.forEach((removetask) => {
-  // Make it so each task that is created has its own id as it loops through below.
-  removeTasksHtml += `<a id="${removetask.id}" href="#" class="collection-item detail">${removetask.name}</a>`;
-});
-
+// document.getElementById("remove-task").innerHTML = removeTasksHtml
 
 
 

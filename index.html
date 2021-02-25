@@ -23,20 +23,16 @@
     
     <!--External JavaScript Links-->
     <!--Import materialize.js below-->
-    <script defer type="text/javascript" src="materialize/js/materialize.js"></script>
-    <script defer type="text/javascript" src="materialize/js/materialize.min.js"></script>
-    <!--MyJS link below-->
-    <script defer type="text/javascript" src="myjs/main.js"></script>
-    <script defer type="text/javascript" src="myjs/task.js"></script>
-    <script defer type="text/javascript" src="myjs/list.js"></script>
+    
 </head>
 
 <body>
+<div id="what-task"></div>
 <div class="page-content">
     <header>
         <nav>
             <div class="nav-wrapper">
-              <a href="index.html" class="brand-logo">WHAT TO DO!?<i style="color: white;" class="far fa-surprise"></i></a>
+              <a href="index.html" class="brand-logo">WHAT TO DO!?<i style="color: #ffffff;" class="far fa-surprise"></i></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Home</a></li>
@@ -89,12 +85,20 @@
             <h5 id="selected-list-output">Selected List populates here</h5>
             <!-- Name and Add Tasks -->
             <div class="input-field">
-              <input placeholder="Enter Task" id="?" type="text" class="validate">
+              <input placeholder="Enter Task" id="enter-task" type="text" class="validate">
               <label for="enter-task"></label>
             </div>
             <a id="add-task" onclick="addTasks()" class="btn">Add Task</a>
-            <a id="remove-task" onclick="removeTask()" class="btn">Delete Task</a>
-          </div>
+            </div>
+            <div>
+              <div id="what-task" class="collection">
+                <a id="list-name1" href="#!" class="collection-item detail">Selected List</a>
+              <a id="list-name2" href="#!" class="collection-item">Alvin</a>
+              <a id="list-name3" href="#!" class="collection-item">Alvin</a>
+              <a id="list-name4" href="#!" class="collection-item">Alvin</a>
+              </div>
+            </div>
+          
         </div>    
       </div>
     <footer class="page-footer">
@@ -119,6 +123,13 @@
         </div>
       </footer>
 
-    </div>    
+    </div> 
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+    <!--MyJS link below-->
+    <script type="text/javascript" src="myjs/functions.js"></script>
+    <script type="text/javascript" src="myjs/task.js"></script>
+    <script type="text/javascript" src="myjs/list.js"></script>
+    <script type="text/javascript" src="myjs/main.js"></script>   
 </body>
 </html>

@@ -30,8 +30,23 @@ const tasks = [
 
 const lists = [
   {
-    name: 'Shopping List',
-    lists: [
+    id: "fjdslf",
+    name: 'Hardware Shopping List',
+    tasks: [
+      {
+        text: 'bananas',
+        completed: false,
+      },
+      {
+        text: '1 lb ground turkey',
+        completed: false,
+      }
+    ]
+  },
+  {
+    id: "fjdslf",
+    name: 'Garden Shopping List',
+    tasks: [
       {
         text: 'bananas',
         completed: false,
@@ -45,4 +60,4 @@ const lists = [
 ]
 
 const currentList = lists[0];
-const currentTask = tasks[0];
+showLists();

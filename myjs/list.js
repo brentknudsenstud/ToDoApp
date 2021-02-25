@@ -1,11 +1,13 @@
 // 1a, 1b - create lists and name lists
 
 // 1c - remove lists
+let selectedList = null;
 
 class List {
-    constructor(id,name) { 
-      this.id = id;
+    constructor(name) { 
+      this.id = getNewId('list-');
       this.name = name;
+      this.tasks = [];
     }
     addTask() {
   
@@ -20,29 +22,29 @@ class List {
   }
   let list = new List(1, 'hardware store') 
 
-  function showList() {
+  // MODEL MY PRINTING/ADDING HTML FUNCTIONS AFTER THIS FUNCTION BELOW!
+  function showLists() {
     // hold the html that will be displayed in the list sidebar
-    let listsHtml = '<div id="what-list" class="collection">';
+    let listsHtml = '';
     // iterate through the lists to get their names
     lists.forEach((list) => {
       // Make it so each list that is created has its own id as it loops through below.
-      listsHtml += '<a id="${list.id}" href="#" class="collection-item detail">${list.name}</a>';
+      listsHtml += `<a onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" href="#" class="collection-item detail">${list.name}</a>`;
     });
-  }
-  //print out the lists
+    //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;
-
+  }
+  
+  // Pattern the addTasks() function in task.js after the addLists() function below
   function addLists() {
     const text =
-      document.getElementById('what-list').value;
+      document.getElementById('list-name').value;
     if (text) {
-      currentList.lists.push({
-        text: text,
-        completed: false,
-      })
-      showList();
+      lists.push(new List(text)
+      )
+      showLists();
     }
-    window.localStorage.setItem(lists, JSON.stringify(text));
+   // window.localStorage.setItem(lists, JSON.stringify(text));
   }
 
 // 6b - delete lists without completing them first
@@ -50,22 +52,17 @@ class List {
     const text = 
     document.getElementById('remove-list').value;
     if (text) {
-      currentList.lists.pop({ // not sure if this is right
-        text: text,
-        completed: true,
-      })
-      showList();
+      
+      showLists();
     }
 
 }
 
-// 7a - use local storage to store list names
+// 7a - USE LOCAL STORAGE TO STORE LIST NAMES
 //localStorage can only store strings.
 // To store arrays or objects, you would have to convert them to strings 
 // To do this, use the JSON.stringify() method before passing to setItem()
-window.localStorage.setItem(listName, List);
+// window.localStorage.setItem(listName, List);
 
-const list = {
-  name: ""
-}
+
   
