@@ -28,7 +28,7 @@ const tasks = [
   }
 ]
 
-const lists = [
+let lists = [
   {
     id: "fjdslf",
     name: 'Hardware Shopping List',

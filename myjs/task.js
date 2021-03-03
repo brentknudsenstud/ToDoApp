@@ -20,14 +20,13 @@ class Task {
       tasksHtml += `<a id="${task.id}" href="#!" class="collection-item detail">${task.text}</a>`;
     });
     // print out the tasks
-    let test = document.getElementById('what-task'); 
-    console.log(test);
+    document.getElementById('what-task').innerHTML = tasksHtml;
 
   }
   // The function below was patterned after the addLists() function in list.js
   function addTasks() {
       const text =
-        document.getElementById('enter-task').value;
+        document.getElementById('add-task').value;
       if (text) {
         lists.push(new Task(text)
         )

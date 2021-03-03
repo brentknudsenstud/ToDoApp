@@ -29,7 +29,7 @@ class List {
     // iterate through the lists to get their names
     lists.forEach((list) => {
       // Make it so each list that is created has its own id as it loops through below.
-      listsHtml += `<a onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" href="#" class="collection-item detail">${list.name}</a>`;
+      listsHtml += `<div id="div-${list.id}" class="col s8"><a onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" href="#" class="collection-item detail">${list.name}</a> <button class="btn" onclick="removeList('div-${list.id}')"><i class="far fa-trash-alt"></button></i></div>`;
     });
     //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;
@@ -48,15 +48,17 @@ class List {
   }
 
 // 6b - delete lists without completing them first
-  function removeLists() {
-    const text = 
-    document.getElementById('remove-list').value;
-    if (text) {
-      
-      showLists();
+  function removeList(listid) {
+    let text = document.getElementById(listid).innerText;
+    lists = lists.filter(function (item) {
+      return text != item.name;
+    })
+    // if (text) {
+    // // remove the list
+    // document.getElementById(listid).innerText = '';
+    // showLists again
+    showLists();
     }
-
-}
 
 // 7a - USE LOCAL STORAGE TO STORE LIST NAMES
 //localStorage can only store strings.
@@ -64,5 +66,11 @@ class List {
 // To do this, use the JSON.stringify() method before passing to setItem()
 // window.localStorage.setItem(listName, List);
 
+// Code commented out below is example // from slide 10 from Browser Storage // /// lecture, may be helpful on this ToDo app
+// const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  
+// DBOpenRequest.onsuccess = function(event) {
+//   db = DBOpenRequest.result;
+// };
+// See also slide 11 for more variables and function examples
+   

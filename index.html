@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<div id="what-task"></div>
+<!-- <div id="what-task"></div> -->
 <div class="page-content">
     <header>
         <nav>
@@ -69,10 +69,10 @@
               <label for="list-name"></label>
             </div>
             <!-- Add List Button -->
-            <a id="add-list" class="btn" onclick="addLists()">Add List</a>
-            <!--  Delete List Button -->
-            <a id="remove-list" class="btn" onclick="removeLists()">Delete List</a>
-            
+            <a id="add-list" class="btn" onclick="addLists()"><i class="fas fa-plus"></i></a>  
+            <!-- Delete List Button -->
+            <!-- <a id="remove-list" class="btn" onclick="removeList()"><i class="far fa-trash-alt"></i></a> -->
+
             <!-- List div with list items inside -->
             <div id="what-list" class="collection">
               <a id="list-name1" href="#!" class="collection-item detail">Selected List</a>
@@ -82,17 +82,17 @@
             </div>      
           </div>
           <div class="col s8 m6 l8">
-            <h5 id="selected-list-output">Selected List populates here</h5>
+            <h5 id="selected-list-output"></h5>
             <!-- Name and Add Tasks -->
             <div class="input-field">
               <input placeholder="Enter Task" id="enter-task" type="text" class="validate">
               <label for="enter-task"></label>
             </div>
-            <a id="add-task" onclick="addTasks()" class="btn">Add Task</a>
+            <a id="add-task" onclick="addTasks()" class="btn"><i class="fas fa-plus"></i></a>
             </div>
             <div>
               <div id="what-task" class="collection">
-                <a id="list-name1" href="#!" class="collection-item detail">Selected List</a>
+                <a id="list-name1" href="#!" class="collection-item detail">Selected Task</a>
               <a id="list-name2" href="#!" class="collection-item">Alvin</a>
               <a id="list-name3" href="#!" class="collection-item">Alvin</a>
               <a id="list-name4" href="#!" class="collection-item">Alvin</a>
