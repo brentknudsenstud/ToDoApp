@@ -17,7 +17,7 @@
 //   ]
 // }
 
-const tasks = [
+let tasks = [
   {
     text: 'bananas',
     completed: false

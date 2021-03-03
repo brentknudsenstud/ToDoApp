@@ -53,9 +53,6 @@ class List {
     lists = lists.filter(function (item) {
       return text != item.name;
     })
-    // if (text) {
-    // // remove the list
-    // document.getElementById(listid).innerText = '';
     // showLists again
     showLists();
     }

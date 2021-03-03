@@ -9,7 +9,10 @@ class Task {
     }
     setCompleted() { }
     editTasks() { }
+  
   }
+  
+  let task = new Task(1, 'saw');
   // Pattern function showTasks() below after the showLists() function in list.js
   function showTasks() {
     
