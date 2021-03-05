@@ -1,9 +1,11 @@
 // 2 - create limitless tasks
 
 // 3 - mark task complete
+
+
 class Task {
-    constructor(text, id) {
-      this.id = id;
+    constructor(text) {
+      this.id = getNewId('task-');
       this.text = text;
       this.completed = false;
     }
@@ -11,16 +13,22 @@ class Task {
     editTasks() { }
   
   }
-  
+
   let task = new Task(1, 'saw');
   // Pattern function showTasks() below after the showLists() function in list.js
   function showTasks() {
-    
-    // iterate over the tasks in the current list
+    // hold the html that will be displayed in the task sidebar
     let tasksHtml = '';
+    // iterate over the tasks in the current list
     tasks.forEach((task) => {
-    // Make it so each list that is created has its own id as it loops through below
-      tasksHtml += `<a id="${task.id}" href="#!" class="collection-item detail">${task.text}</a>`;
+    // Make it so each task that is created has its own id as it loops through below
+      tasksHtml += `
+      <div id="div-${task.id}" class="col s8">
+      <a id="${task.id}" href="#" class="collection-item detail">${task.text}</a>
+      <button class="btn" onclick="removeTask('div-${task.id}')">
+      <i class="far fa-trash-alt"></i>
+      </button>
+      </div>`;
     });
     // print out the tasks
     document.getElementById('what-task').innerHTML = tasksHtml;
@@ -29,13 +37,22 @@ class Task {
   // The function below was patterned after the addLists() function in list.js
   function addTasks() {
       const text =
-        document.getElementById('add-task').value;
+        document.getElementById('enter-task').value;
       if (text) {
-        lists.push(new Task(text)
+        tasks.push(new Task(text)
         )
         showTasks();
       }
      // window.localStorage.setItem(lists, JSON.stringify(text));
+    }
+
+    function removeTask(taskid) {
+      let text = document.getElementById(taskid).innerText;
+      tasks = tasks.filter(function (item) {
+        return text != item.name;
+      })
+      // showTasks again
+      showTasks();
     }
 
   function markTasksCompleted() {

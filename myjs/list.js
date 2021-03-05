@@ -7,7 +7,7 @@ class List {
     constructor(name) { 
       this.id = getNewId('list-');
       this.name = name;
-      this.tasks = [];
+      this.lists = [];
     }
     addTask() {
   
