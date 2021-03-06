@@ -48,9 +48,9 @@ class Task {
 
     function removeTask(taskid) {
       let text = document.getElementById(taskid).innerText;
+      console.log(taskid);
       tasks = tasks.filter(function (item) {
-        return text != item.name;
-        console.log(taskid);
+        return text != item.id;
       })
       // showTasks again
       showTasks();
