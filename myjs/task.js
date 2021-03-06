@@ -25,7 +25,7 @@ class Task {
       tasksHtml += `
       <div id="div-${task.id}" class="col s8">
            <a id="${task.id}" href="#" class="collection-item detail">${task.text}</a>
-      <button class="btn" onclick="removeTask('div-${task.id}')">
+      <button class="btn" onclick="removeTask('${task.id}')">
       <i class="far fa-trash-alt"></i>
       </button>
       </div>`;
