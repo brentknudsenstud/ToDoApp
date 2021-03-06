@@ -24,7 +24,7 @@ class Task {
     // Make it so each task that is created has its own id as it loops through below
       tasksHtml += `
       <div id="div-${task.id}" class="col s8">
-      <a id="${task.id}" href="#" class="collection-item detail">${task.text}</a>
+           <a id="${task.id}" href="#" class="collection-item detail">${task.text}</a>
       <button class="btn" onclick="removeTask('div-${task.id}')">
       <i class="far fa-trash-alt"></i>
       </button>

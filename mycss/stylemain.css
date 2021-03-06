@@ -1,3 +1,10 @@
+@use "@material/checkbox";
+@use "@material/form-field";
+
+@include checkbox.core-styles;
+@include form-field.core-styles;
+
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: #bc412b;
@@ -29,6 +36,9 @@ input[type=text]:not(.browser-default):hover {
     color: #bc412b;
 }
 
+[type="checkbox"]:not(:checked) {
+    opacity: .5;
+}
 .collection a.collection-item {
     color: #bc412b;
 }
