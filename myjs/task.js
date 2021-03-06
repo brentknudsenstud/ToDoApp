@@ -50,6 +50,7 @@ class Task {
       let text = document.getElementById(taskid).innerText;
       tasks = tasks.filter(function (item) {
         return text != item.name;
+        console.log(taskid);
       })
       // showTasks again
       showTasks();
