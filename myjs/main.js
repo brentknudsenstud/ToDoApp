@@ -29,7 +29,7 @@ let lists = [
     tasks: tasks
   },
   {
-    id: fjdsfl,
+    id: "fjdsfl",
     name: "Garden Shopping List",
     tasks: tasks
   }
