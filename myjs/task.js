@@ -24,7 +24,7 @@ class Task {
     // Make it so each task that is created has its own id as it loops through below
       tasksHtml += `
       <div id="div-${task.id}" class="col s8">
-           <a id="${task.id}" href="#" class="collection-item detail">${task.text}</a>
+           <div id="${task.id}" class="collection-item detail">${task.text}</div>
       <button class="btn" onclick="removeTask('${task.id}')">
       <i class="far fa-trash-alt"></i>
       </button>
@@ -50,7 +50,7 @@ class Task {
       let text = document.getElementById(taskid).innerText;
       console.log(taskid);
       tasks = tasks.filter(function (item) {
-        return text != item.id;
+        return taskid !== item.id;
       })
       // showTasks again
       showTasks();
@@ -71,10 +71,10 @@ function editTasks() {
 
 // 6a - delete tasks without completing them first
 // How will I let the user do that? Create a button for the user to do that. Have a remove button for each line.
-function removeTask(id, name) {
-  list.removeTask(id, name);
-  print();
-}
+//function removeTask(id, name) {
+//   list.removeTask(id, name);
+//   print();
+// }
 // // hold the html that will displayed in the task 'sidebar'
 // let removeTasksHtml = '<div id="remove-task" class="collection">';
 // // iterate through the tasks to remove them

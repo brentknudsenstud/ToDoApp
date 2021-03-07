@@ -9,12 +9,6 @@ class List {
       this.name = name;
       this.lists = [];
     }
-    addTask() {
-  
-    }
-    removeTask() {
-  
-    }
     getTask() {
 
     }
@@ -29,7 +23,12 @@ class List {
     // iterate through the lists to get their names
     lists.forEach((list) => {
       // Make it so each list that is created has its own id as it loops through below.
-      listsHtml += `<div id="div-${list.id}" class="col s8"><a onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" href="#" class="collection-item detail">${list.name}</a> <button class="btn" onclick="removeList('div-${list.id}')"><i class="far fa-trash-alt"></button></i></div>`;
+      listsHtml += `<div id="div-${list.id}" class="col s8">
+      <div onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" class="collection-item detail">${list.name}</div>
+      <button class="btn" onclick="removeList('task-${list.id}')">
+      <i class="far fa-trash-alt"></i>
+      </button>
+      </div>`;
     });
     //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;

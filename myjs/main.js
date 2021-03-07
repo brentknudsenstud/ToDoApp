@@ -18,46 +18,23 @@
 // }
 
 let tasks = [
-  {
-    text: 'bananas',
-    completed: false
-  },
-  {
-    text: '1 lb ground turkey',
-    completed: false
-  }
-]
+    new Task ('bananas'),
+    new Task ('1 lb ground turkey'),
+];
 
 let lists = [
   {
     id: "fjdslf",
     name: 'Hardware Shopping List',
-    tasks: [
-      {
-        text: 'bananas',
-        completed: false,
-      },
-      {
-        text: '1 lb ground turkey',
-        completed: false,
-      }
-    ]
+    tasks: tasks
   },
   {
-    id: "fjdslf",
-    name: 'Garden Shopping List',
-    tasks: [
-      {
-        text: 'bananas',
-        completed: false,
-      },
-      {
-        text: '1 lb ground turkey',
-        completed: false,
-      }
-    ]
-  },
-]
+    id: fjdsfl,
+    name: "Garden Shopping List",
+    tasks: tasks
+  }
+];
+     
 
 const currentList = lists[0];
 showLists();
