@@ -49,6 +49,7 @@ class List {
 // 6b - delete lists without completing them first
   function removeList(listid) {
     let text = document.getElementById(listid).innerText;
+    console.log(listid);
     lists = lists.filter(function (item) {
       return text != item.name;
     })
