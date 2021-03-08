@@ -24,7 +24,11 @@ class Task {
     // Make it so each task that is created has its own id as it loops through below
       tasksHtml += `
       <div id="div-${task.id}" class="col s8">
-           <div id="${task.id}" class="collection-item detail">${task.text}</div>
+           <div id="${task.id}" class="collection-item detail">
+           <label>
+           <input type="checkbox" />
+           <span>${task.text}</span>
+         </label></div>
       <button class="btn" onclick="removeTask('${task.id}')">
       <i class="far fa-trash-alt"></i>
       </button>

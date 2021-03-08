@@ -35,9 +35,9 @@ input[type=text]:not(.browser-default):hover {
     color: #bc412b;
 }
 
-[type="checkbox"]:not(:checked) {
+/* [type="checkbox"]:not(:checked) {
     opacity: 1.0;
-}
+} */
 
 .collection a.collection-item {
     color: #bc412b;
@@ -45,7 +45,7 @@ input[type=text]:not(.browser-default):hover {
 
 label {
     color: #bc412b;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     font-size: 1em;
 
 
