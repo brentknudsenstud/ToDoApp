@@ -25,7 +25,7 @@ class List {
       // Make it so each list that is created has its own id as it loops through below.
       listsHtml += `<div id="div-${list.id}" class="col s8">
       <div onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" class="collection-item detail">${list.name}</div>
-      <button class="btn" onclick="removeList('task-${list.id}')">
+      <button class="btn" onclick="removeList('${list.id}')">
       <i class="far fa-trash-alt"></i>
       </button>
       </div>`;
