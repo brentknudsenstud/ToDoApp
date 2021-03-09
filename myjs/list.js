@@ -1,6 +1,6 @@
-// 1a, 1b - create lists and name lists
+// 1a, 1b - create lists and name lists: done!
 
-// 1c - remove lists
+// 1c - remove lists: done!
 let selectedList = null;
 
 class List {
@@ -14,7 +14,7 @@ class List {
     }
   
   }
-  let list = new List(1, 'hardware store') 
+  let list = new List(1, 'hardware store'); 
 
   // MODEL MY PRINTING/ADDING HTML FUNCTIONS AFTER THIS FUNCTION BELOW!
   function showLists() {

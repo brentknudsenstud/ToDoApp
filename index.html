@@ -68,7 +68,6 @@
         <div class="row">
           <div class="col s4 m4 l4">
             
-            
             <!-- Name and Add Lists -->
             <div class="input-field">
               <input placeholder="Enter List" id="list-name" type="text" class="validate">
@@ -80,26 +79,26 @@
             
 
             <!-- List div with list items inside -->
-            <div id="what-list" class="collection">
-              
-            </div>      
+            <div id="what-list" class="collection"></div>      
           </div>
-          <div class="col s8 m6 l8">
-            <h5 id="selected-list-output">Selected List Appears Here</h5>
-            <!-- Name and Add Tasks -->
-            <div class="input-field">
-              <input placeholder="Enter Task" id="enter-task" type="text" class="validate">
-              <label for="enter-task"></label>
+          <div class="row">
+            <div class="col s8 m6 l8">
+              <h5 id="selected-list-output">Selected List Appears Here</h5>
+                <!-- Name and Add Tasks -->
+                <div class="input-field">
+                  <input placeholder="Enter Task" id="enter-task" type="text" class="validate">
+                  <label for="enter-task"></label>
+                </div>
+                  <!-- Add Task Button -->
+                  <div id="add-task" onclick="addTasks()" class="btn"><i class="fas fa-plus"></i></div>
+                </div>
+                <div>
+                  <div id="what-task" class="collection">
+                  </div>
+                </div>
             </div>
-            <!-- Add Task Button -->
-            <div id="add-task" onclick="addTasks()" class="btn"><i class="fas fa-plus"></i></div>
             </div>
-            <div>
-              <div id="what-task" class="collection">
-
-              </div>
-            </div>
-          </div>
+          </div>  
         </div>    
       </div>
     <footer class="page-footer">

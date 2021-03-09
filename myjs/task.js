@@ -44,8 +44,7 @@ class Task {
       const text =
         document.getElementById('enter-task').value;
       if (text) {
-        tasks.push(new Task(text)
-        )
+        tasks.push(new Task(text)); // somehow connect the tasks to the list they are in (optional-ish)
         showTasks();
       }
      // window.localStorage.setItem(lists, JSON.stringify(text));
@@ -62,10 +61,13 @@ class Task {
     }
 
   function markTasksCompleted() {
-
+    // did this through materialize's css and js
 }
 // 4 - clear completed task
 function clearCompletedTasks() {
+  // create a button below the task list where all the tasks that are completed get removed
+  // create an eventListener or onclick event that responds to the tasks that are completed (checkbox) so that the function below runs
+  // Create a function that loops through the tasks and filters out the ones that are completed
 
 }
 // 5 - edit task
@@ -74,15 +76,13 @@ function editTasks() {
 }
 
 
-// 6a - delete tasks without completing them first
+// 6a - delete tasks without completing them first: done!
 // How will I let the user do that? Create a button for the user to do that. Have a remove button for each line.
-//function removeTask(id, name) {
+//  function removeTask(id, name) {
 //   list.removeTask(id, name);
 //   print();
 // }
-// // hold the html that will displayed in the task 'sidebar'
-// let removeTasksHtml = '<div id="remove-task" class="collection">';
-// // iterate through the tasks to remove them
+//let removeTasksHtml = '<div id="remove-task" class="collection">';
 // currentList.tasks.forEach((removetask) => {
 //   // Make it so each task that is created has its own id as it loops through below.
 //   removeTasksHtml += `<a id="${removetask.id}" href="#" class="collection-item detail">${removetask.name}</a>`;
