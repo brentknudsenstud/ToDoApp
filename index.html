@@ -13,9 +13,9 @@
     
     <!--External CSS links-->
     <!--Import materialize.css below-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -82,7 +82,7 @@
             <div id="what-list" class="collection"></div>      
           </div>
           <div class="row">
-            <div class="col s8 m6 l8">
+            <div class="col s12 m6 l8">
               <h5 id="selected-list-output">Selected List Appears Here</h5>
                 <!-- Name and Add Tasks -->
                 <div class="input-field">
@@ -91,13 +91,17 @@
                 </div>
                   <!-- Add Task Button -->
                   <div id="add-task" onclick="addTasks()" class="btn"><i class="fas fa-plus"></i></div>
-                </div>
-                <div>
                   <div id="what-task" class="collection">
                   </div>
+                  <div id="clear-completed-task" onclick="clearCompletedTasks()" class="btn"><i class="fas fa-history"></i><span class="mont-font">CLEAR COMPLETED TASKS
+                  </span>
+                  </div>
+                </div>
                 </div>
             </div>
             </div>
+            <!-- Clear completed tasks button -->
+            
           </div>  
         </div>    
       </div>

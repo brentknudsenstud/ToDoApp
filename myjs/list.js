@@ -23,11 +23,16 @@ class List {
     // iterate through the lists to get their names
     lists.forEach((list) => {
       // Make it so each list that is created has its own id as it loops through below.
-      listsHtml += `<div id="div-${list.id}" class="col s8">
-      <div onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" class="collection-item detail">${list.name}</div>
-      <button class="btn" onclick="removeList('${list.id}')">
+      listsHtml += `<div id="div-${list.id}" class="col s12 m12">
+      <div onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" class="collection-item detail">
+      
+      <label><span>${list.name}<span>
+      <span><button class="btn" onclick="removeList('${list.id}')">
       <i class="far fa-trash-alt"></i>
-      </button>
+      </button></span>
+      </label>
+      <div class="divider"></div>
+      </div>
       </div>`;
     });
     //print out the lists

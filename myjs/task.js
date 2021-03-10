@@ -24,15 +24,18 @@ class Task {
     tasks.forEach((task) => {
     // Make it so each task that is created has its own id as it loops through below
       tasksHtml += `
-      <div id="div-${task.id}" class="col s8">
+      <div id="div-${task.id}" class="col s12 m12">
            <div id="${task.id}" class="collection-item detail">
            <label>
            <input type="checkbox" />
            <span>${task.text}</span>
-         </label></div>
-      <button class="btn" onclick="removeTask('${task.id}')">
+           <span><button class="btn" onclick="removeTask('${task.id}')">
       <i class="far fa-trash-alt"></i>
-      </button>
+      </button><span>
+         </label>
+         <div class="divider"></div>
+      </div>
+      
       </div>`;
     });
     // print out the tasks
