@@ -21,12 +21,8 @@ body {
 .divider {
     background-color: lightgray;
     height: 2px;
-    margin: 40px 0;
 }
 
-.divider:nth-child(2) {
-    margin: 0px;
-}
 
 input[type=text]:not(.browser-default) {
     background-color: white;
@@ -49,7 +45,7 @@ input[type=text]:not(.browser-default):hover {
 
 label {
     color: #bc412b;
-    /* margin-left: 20px; */
+    margin-left: 20px;
     font-size: 1em;
 
 
@@ -63,6 +59,7 @@ label {
     background-color: #05a8aa;
     box-shadow: none;
     margin: 0 10px 20px 10px;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .material-icons {
@@ -71,7 +68,7 @@ label {
 
 }
 
- .mont-font {
+.mont-font {
      font-family: 'Montserrrat', sans-serif;
      font-size: 14px;
      padding-left: 5px;

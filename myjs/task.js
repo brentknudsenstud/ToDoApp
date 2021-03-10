@@ -33,10 +33,9 @@ class Task {
       <i class="far fa-trash-alt"></i>
       </button><span>
          </label>
+         </div>
          <div class="divider"></div>
-      </div>
-      
-      </div>`;
+      <div>`;
     });
     // print out the tasks
     document.getElementById('what-task').innerHTML = tasksHtml;
@@ -68,8 +67,8 @@ class Task {
 }
 // 4 - clear completed task
 function clearCompletedTasks() {
-  // create a button below the task list where all the tasks that are completed get removed
-  // create an eventListener or onclick event that responds to the tasks that are completed (checkbox) so that the function below runs
+
+  /* create an eventListener or onclick event that responds to the tasks that are completed (checkbox present) so that the function below runs; make sure that it only responds to those task items that are checked, so I need to create an if/else statement to check for if true, then clear items, if false do not run clearCompletedTasks()that checks for checked items */
   // Create a function that loops through the tasks and filters out the ones that are completed
 
 }

@@ -26,14 +26,15 @@ class List {
       listsHtml += `<div id="div-${list.id}" class="col s12 m12">
       <div onclick="selectPopulateList('${list.id}', '${list.name}')" id="${list.id}" class="collection-item detail">
       
-      <label><span>${list.name}<span>
-      <span><button class="btn" onclick="removeList('${list.id}')">
-      <i class="far fa-trash-alt"></i>
-      </button></span>
-      </label>
-      <div class="divider"></div>
+        <label><span>${list.name}<span>
+        </label>
+        
       </div>
-      </div>`;
+      <button class="btn" onclick="removeList('${list.id}')">
+      <i class="far fa-trash-alt"></i>
+      </button>
+        <div class="divider">
+        </div>`;
     });
     //print out the lists
   document.getElementById('what-list').innerHTML = listsHtml;
