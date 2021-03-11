@@ -76,8 +76,10 @@ function clearCompletedTasks() {
   }); 
   tasks = tasks.filter(function (atask) {
   taskComplete;
-  if (taskComplete == false) {
-    // syntax inside parentheses for does the text exist in my task array
+  if (taskComplete == true ) {
+    return taskComplete;
+    
+    // syntax inside outer parentheses for "Does the text exist in my task array?""
   }
 });
   showTasks();
