@@ -27,7 +27,7 @@ class Task {
       
         <div id="${task.id}" class="collection-item detail">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox"  onclick="toggleTaskCompleted(this, '${task.id}')"/>
             <span>${task.text}</span>
             <span><button class="btn" onclick="removeTask('${task.id}')">
               <i class="far fa-trash-alt"></i>
@@ -66,24 +66,18 @@ class Task {
   function markTasksCompleted() {
     // did this through materialize's css and js
 }
+
+function toggleTaskCompleted(checkbox, taskId) {
+  const task = tasks.find(task => task.id = taskId)
+  task.completed = checkbox.checked;
+}
 // 4 - clear completed task
 function clearCompletedTasks() {
-
-  /* create an eventListener or onclick event that responds to the tasks that are completed (checkbox present) so that the function below runs; make sure that it only responds to those task items that are checked that checks for checked items */
-  let taskComplete = [...document.querySelectorAll("#task-container input")]
-  .filter(function(atask) {
-      return atask.checked == true;
-  }); 
+  
   tasks = tasks.filter(function (atask) {
-  taskComplete;
-  if (taskComplete == true ) {
-    return taskComplete;
-    
-    // syntax inside outer parentheses for "Does the text exist in my task array?""
-  }
+  return !atask.completed;
 });
   showTasks();
-  console.log(taskComplete);
   // Create a function that loops through the tasks and filters out the ones that are completed, use filter method
   // filter: checked or not checked
   // return true for any objects that have an unchecked box

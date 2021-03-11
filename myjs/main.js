@@ -18,8 +18,8 @@
 // }
 
 let tasks = [
-    new Task ('bananas'),
-    new Task ('1 lb ground turkey'),
+   // new Task ('bananas'),
+   // new Task ('1 lb ground turkey'),
 ];
 
 let lists = [
